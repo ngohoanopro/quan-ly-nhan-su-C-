@@ -187,7 +187,6 @@ class Admin
 public:
     Admin()
     {
-        this->seederEmployee();
     }
     void add()
     {
@@ -195,10 +194,17 @@ public:
              << endl;
         cout << "------------------------------------- Add Employee Details ---------------------------------------------"
              << endl;
+        int n;
+        cout << "You want to many employee: ";
+        cin >> n;
+        for (int i = 0; i < n; i++)
+        {
+            cout << "Input employee no: " << i + 1 << endl;
+            Employee employee = createEmployee(rand()); // goi den ham createEmployee de khoi tao 1 doi tuong employee
+            e.push_back(employee);                      // them employee vao vector
+        }
 
-        Employee employee = createEmployee(rand()); // goi den ham createEmployee de khoi tao 1 doi tuong employee
-        e.push_back(employee);                      // them employee vao vector
-        this->show();                               // goi den ham show ra list table employee
+        this->show(); // goi den ham show ra list table employee
     }
 
     void show()
@@ -243,6 +249,7 @@ public:
             else
             {
                 cout << "No employee any code has been: " << code;
+                break;
             }
         }
 
@@ -385,15 +392,6 @@ public:
         return employee;
     }
 
-    void seederEmployee() // ham tao ra 3 doi tuong nhan vien mau
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            Employee employee(rand(), "user", "boy", 18, "user@gmail.com", "0929045888", "15/06/2000", 1, 1, 1.2);
-            e.push_back(employee);
-        }
-    }
-
     void menu()
     {
     menustart:
@@ -449,6 +447,7 @@ int main()
     au->login();      // tro den ham login
 
     Admin admin;
+    admin.add();
     admin.menu();
 
     return 0;
