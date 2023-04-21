@@ -191,7 +191,7 @@ public:
     Employee createEmployee(int code) // function tra ve 1 doi tuong employee duoc khoi ta nhan vao bien code
     {
         int workingTime, position, department;            // khai bai thoi gian lam viec , chuc vu , phong ban
-        string name, gender, email, numberPone, birthday; // khai bao ten gioi tinh, ....
+        string name, gender, email, numberPhone, birthday; // khai bao ten gioi tinh, ....
         float bonus;                                      // khai bao tien thuong
 
         cout << "Enter employee name: ";
@@ -202,8 +202,8 @@ public:
         cin >> workingTime;
         cout << "Enter employee email: ";
         cin >> email;
-        cout << "Enter employee numberPone: ";
-        cin >> numberPone;
+        cout << "Enter employee numberPhone: ";
+        cin >> numberPhone;
         cout << "Enter employee birthday: ";
         cin >> birthday;
         cout
@@ -216,7 +216,7 @@ public:
             << "Enter employee bonus: ";
         cin >> bonus;
 
-        Employee employee(code, name, gender, workingTime, email, numberPone, birthday, position, department, bonus); // khoi tao 1 doi tuong nhan vien
+        Employee employee(code, name, gender, workingTime, email, numberPhone, birthday, position, department, bonus); // khoi tao 1 doi tuong nhan vien
 
         return employee;
     }

@@ -9,18 +9,18 @@ class Employee : public Salary // lop nhan vien ke thua lop luong
 {
 private:
     int code, workingTime, position, department; // code(ma nhan vien), workingTime(so gio lam viec), position(chuc vu), department(phong ban)
-    string name, gender, email, numberPone, birthday;
+    string name, gender, email, numberPhone, birthday;
     float bonus; // tien thuong
 
 public:
-    Employee(int code, string name, string gender, int workingTime, string email, string numberPone, string birthday, int position, int department, float bonus) // truyen tham so ham khoi tao object
+    Employee(int code, string name, string gender, int workingTime, string email, string numberPhone, string birthday, int position, int department, float bonus) // truyen tham so ham khoi tao object
     {
         this->code = code;     // gan gia tri code cua class = code truyen vao tu tham so
         this->name = name;     // gan gia tri name cua class = name truyen vao tu tham so
         this->gender = gender; // gan gia tri gender cua class = gender truyen vao tu tham so
         this->workingTime = workingTime;
         this->email = email;
-        this->numberPone = numberPone;
+        this->numberPhone = numberPhone;
         this->birthday = birthday;
         this->position = position;
         this->department = department;
@@ -49,7 +49,7 @@ public:
 
     string getNumberPhone() // lay ra gia tri numberphone cua nhan vien (vi phone minh dang de la private)
     {
-        return this->numberPone;
+        return this->numberPhone;
     }
 
     string getBirthday() // lay ra gia tri birthday cua nhan vien (vi birthday minh dang de la private)
